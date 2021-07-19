@@ -46,6 +46,11 @@ namespace Tirkhanti_R12.Controllers
              return View(list);
         }
 
+        public ActionResult ViewMonthly()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
