@@ -27,8 +27,6 @@ namespace Tirkhanti_R12.Data
             builder.Entity<Emotions>().ToTable("Emotion");
             builder.Entity<StudentReport>().ToTable("StudentReport");
             builder.Entity<EmergencyContact>().ToTable("EmergencyContact");
-            builder.Entity<AspNetRoles>().ToTable("AspNetRoles");
-
         }
     }
 }

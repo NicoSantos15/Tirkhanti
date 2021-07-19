@@ -163,3 +163,4 @@ C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Tirkhan
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\ref\Tirkhanti_Project.dll
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Tirkhanti_Project.pdb
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Tirkhanti_Project.genruntimeconfig.cache
+C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Home\ViewMonthly.cshtml.g.cs

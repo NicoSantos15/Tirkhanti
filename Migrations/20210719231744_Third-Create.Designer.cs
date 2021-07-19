@@ -10,8 +10,8 @@ using Tirkhanti_R12.Data;
 namespace Tirkhanti_R12.Migrations
 {
     [DbContext(typeof(Tirkhanti_R12Context))]
-    [Migration("20210719121143_ThirdMigrate")]
-    partial class ThirdMigrate
+    [Migration("20210719231744_Third-Create")]
+    partial class ThirdCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

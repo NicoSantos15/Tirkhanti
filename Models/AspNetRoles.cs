@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,7 +13,7 @@ namespace Tirkhanti_R12.Models
         Leader,
         SeniorLeader
     }
-    public class AspNetRoles : IdentityRole
+    public class AspNetRoles
     {
         [Key]
         [Required]
