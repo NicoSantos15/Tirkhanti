@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,22 +8,9 @@ using System.Threading.Tasks;
 
 namespace Tirkhanti_R12.Models
 {
-    public enum RoleType
+    public class AspNetRoles : IdentityRole
     {
-        Student,
-        Leader,
-        SeniorLeader
-    }
-    public class AspNetRoles
-    {
-        [Key]
-        [Required]
-        [Display(Name = "Role ID")]
-        public int RoleID { get; set; }
-
         [Display(Name = "Role Name")]
-        [ForeignKey("RoleType")]
-        public RoleType RoleName { get; set; }
-
+        public string RoleName { get; set; }
     }
 }

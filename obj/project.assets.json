@@ -7491,9 +7491,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicod\\source\\repos\\Tirkhanti_R12\\Tirkhanti_R12\\Tirkhanti_Project.csproj",
-      "projectName": "Tirkhanti_Project",
-      "projectPath": "C:\\Users\\nicod\\source\\repos\\Tirkhanti_R12\\Tirkhanti_R12\\Tirkhanti_Project.csproj",
+      "projectUniqueName": "C:\\Users\\nicod\\source\\repos\\Tirkhanti_R12\\Tirkhanti_R12\\Tirkhanti_R12.csproj",
+      "projectName": "Tirkhanti_R12",
+      "projectPath": "C:\\Users\\nicod\\source\\repos\\Tirkhanti_R12\\Tirkhanti_R12\\Tirkhanti_R12.csproj",
       "packagesPath": "C:\\Users\\nicod\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\nicod\\source\\repos\\Tirkhanti_R12\\Tirkhanti_R12\\obj\\",
       "projectStyle": "PackageReference",

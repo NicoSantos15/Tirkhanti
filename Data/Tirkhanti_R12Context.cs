@@ -20,6 +20,9 @@ namespace Tirkhanti_R12.Data
         public DbSet<Emotions> Emotion { get; set; }
         public DbSet<StudentReport> StudentReport { get; set; }
         public DbSet<Tirkhanti_R12Users> R12Users { get; set; }
+        public DbSet<LeaderAssignedReport> LeaderAssignedReports { get; set; }
+        public DbSet<LeaderChecked> LeadersChecked { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -27,6 +30,9 @@ namespace Tirkhanti_R12.Data
             builder.Entity<Emotions>().ToTable("Emotion");
             builder.Entity<StudentReport>().ToTable("StudentReport");
             builder.Entity<EmergencyContact>().ToTable("EmergencyContact");
+            builder.Entity<AspNetRoles>().ToTable("AspNetRoles");
+            builder.Entity<LeaderAssignedReport>().ToTable("LeaderAssignedReport");
+            builder.Entity<LeaderChecked>().ToTable("LeaderChecked");
         }
     }
 }

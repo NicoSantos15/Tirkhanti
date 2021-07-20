@@ -18,7 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Management\" />
+    <Folder Include="Views\Home\LeaderViews\" />
+    <Folder Include="Views\Home\StudentViews\" />
   </ItemGroup>
 
 </Project>

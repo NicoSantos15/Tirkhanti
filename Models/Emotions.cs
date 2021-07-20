@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace Tirkhanti_R12.Models
 {
-    public enum EmotionType 
-    { 
-        Happy,
-        Okay,
-        Annoyed,
-        Frustrated,
-        Angry,
-        Help
-    }
+    //public enum EmotionType 
+    //{ 
+    //    Happy,
+    //    Okay,
+    //    Annoyed,
+    //    Frustrated,
+    //    Angry,
+    //    Help
+    //}
 
     public class Emotions
     {
@@ -24,10 +24,9 @@ namespace Tirkhanti_R12.Models
         [Required]
         public int EmotionID { get; set; }
 
-        [ForeignKey("EmotionType")]
         [Display(Name = "Student Emotion")]
         [Required]
-        public EmotionType? StudentEmotion { get; set; }
+        public string StudentEmotion { get; set; }
 
         [ForeignKey("Id")]
         [Display(Name = "Respond By")]

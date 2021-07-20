@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tirkhanti_R12.Data;
 
 namespace Tirkhanti_R12.Migrations
 {
     [DbContext(typeof(Tirkhanti_R12Context))]
-    partial class Tirkhanti_R12ContextModelSnapshot : ModelSnapshot
+    [Migration("20210720031253_Add-Models")]
+    partial class AddModels
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -208,37 +210,20 @@ namespace Tirkhanti_R12.Migrations
                         .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int?>("ReportID")
-                        .HasColumnType("int");
-
-                    b.HasIndex("Id");
-
-                    b.HasIndex("ReportID");
-
                     b.ToTable("LeaderAssignedReport");
                 });
 
             modelBuilder.Entity("Tirkhanti_R12.Models.LeaderChecked", b =>
                 {
+                    b.Property<string>("CheckedBy")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("CheckedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<bool>("IsChecked")
                         .HasColumnType("bit");
-
-                    b.Property<int?>("ReportID")
-                        .HasColumnType("int");
-
-                    b.HasIndex("Id");
-
-                    b.HasIndex("ReportID");
 
                     b.ToTable("LeaderChecked");
                 });
@@ -433,36 +418,6 @@ namespace Tirkhanti_R12.Migrations
                         .HasForeignKey("Id");
 
                     b.Navigation("RespondBy");
-                });
-
-            modelBuilder.Entity("Tirkhanti_R12.Models.LeaderAssignedReport", b =>
-                {
-                    b.HasOne("Tirkhanti_R12.Models.Tirkhanti_R12Users", "CheckedBy")
-                        .WithMany()
-                        .HasForeignKey("Id");
-
-                    b.HasOne("Tirkhanti_R12.Models.StudentReport", "ReportChecked")
-                        .WithMany()
-                        .HasForeignKey("ReportID");
-
-                    b.Navigation("CheckedBy");
-
-                    b.Navigation("ReportChecked");
-                });
-
-            modelBuilder.Entity("Tirkhanti_R12.Models.LeaderChecked", b =>
-                {
-                    b.HasOne("Tirkhanti_R12.Models.Tirkhanti_R12Users", "CheckedBy")
-                        .WithMany()
-                        .HasForeignKey("Id");
-
-                    b.HasOne("Tirkhanti_R12.Models.StudentReport", "ReportChecked")
-                        .WithMany()
-                        .HasForeignKey("ReportID");
-
-                    b.Navigation("CheckedBy");
-
-                    b.Navigation("ReportChecked");
                 });
 
             modelBuilder.Entity("Tirkhanti_R12.Models.StudentReport", b =>

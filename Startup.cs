@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Tirkhanti_R12.Data;
 
 namespace Tirkhanti_R12
 {
@@ -29,6 +31,9 @@ namespace Tirkhanti_R12
             {
                 options.Conventions.AddPageRoute("/Account/Login", "");
             });
+
+            services.AddDbContext<Tirkhanti_R12Context>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("TirkhantiContext")));
 
         }
 

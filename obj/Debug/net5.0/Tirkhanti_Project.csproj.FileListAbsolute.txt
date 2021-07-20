@@ -164,3 +164,9 @@ C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\ref\Tir
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Tirkhanti_Project.pdb
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Tirkhanti_Project.genruntimeconfig.cache
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Home\ViewMonthly.cshtml.g.cs
+C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Home\LeaderViews\LeaderHome.cshtml.g.cs
+C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Home\LeaderViews\ViewAllStudent.cshtml.g.cs
+C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Home\LeaderViews\ViewMonthly.cshtml.g.cs
+C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Home\LeaderViews\ViewNotification.cshtml.g.cs
+C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Home\StudentViews\Confirmation.cshtml.g.cs
+C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Home\StudentViews\StudentHome.cshtml.g.cs
