@@ -35,6 +35,7 @@ namespace Tirkhanti_R12
             services.AddDbContext<Tirkhanti_R12Context>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("TirkhantiContext")));
 
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

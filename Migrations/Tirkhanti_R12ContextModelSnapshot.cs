@@ -28,10 +28,6 @@ namespace Tirkhanti_R12.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -48,8 +44,6 @@ namespace Tirkhanti_R12.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityRole");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -188,8 +182,9 @@ namespace Tirkhanti_R12.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("StudentEmotion")
-                        .HasColumnType("int");
+                    b.Property<string>("StudentEmotion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("EmotionID");
 
@@ -258,14 +253,14 @@ namespace Tirkhanti_R12.Migrations
                         .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("EmotionID")
+                        .HasColumnType("int");
+
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<bool?>("IsComplete")
                         .HasColumnType("bit");
-
-                    b.Property<int?>("Priority")
-                        .HasColumnType("int");
 
                     b.Property<DateTime?>("ReportDate")
                         .ValueGeneratedOnAdd()
@@ -274,9 +269,16 @@ namespace Tirkhanti_R12.Migrations
                     b.Property<string>("StudentComment")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("StudentEmotion")
+                        .HasColumnType("int");
+
                     b.HasKey("ReportID");
 
+                    b.HasIndex("EmotionID");
+
                     b.HasIndex("FirstName");
+
+                    b.HasIndex("StudentEmotion");
 
                     b.ToTable("StudentReport");
                 });
@@ -343,6 +345,9 @@ namespace Tirkhanti_R12.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("StudentReportReportID")
+                        .HasColumnType("int");
+
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
 
@@ -360,19 +365,9 @@ namespace Tirkhanti_R12.Migrations
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
+                    b.HasIndex("StudentReportReportID");
+
                     b.ToTable("AspNetUsers");
-                });
-
-            modelBuilder.Entity("Tirkhanti_R12.Models.AspNetRoles", b =>
-                {
-                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityRole");
-
-                    b.Property<string>("RoleName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.ToTable("AspNetRoles");
-
-                    b.HasDiscriminator().HasValue("AspNetRoles");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -467,11 +462,35 @@ namespace Tirkhanti_R12.Migrations
 
             modelBuilder.Entity("Tirkhanti_R12.Models.StudentReport", b =>
                 {
+                    b.HasOne("Tirkhanti_R12.Models.Emotions", "Priority")
+                        .WithMany()
+                        .HasForeignKey("EmotionID");
+
                     b.HasOne("Tirkhanti_R12.Models.Tirkhanti_R12Users", "AssignedTo")
                         .WithMany()
                         .HasForeignKey("FirstName");
 
+                    b.HasOne("Tirkhanti_R12.Models.Emotions", "SelectedEmotion")
+                        .WithMany()
+                        .HasForeignKey("StudentEmotion");
+
                     b.Navigation("AssignedTo");
+
+                    b.Navigation("Priority");
+
+                    b.Navigation("SelectedEmotion");
+                });
+
+            modelBuilder.Entity("Tirkhanti_R12.Models.Tirkhanti_R12Users", b =>
+                {
+                    b.HasOne("Tirkhanti_R12.Models.StudentReport", null)
+                        .WithMany("GetTirkhanti_R12Users")
+                        .HasForeignKey("StudentReportReportID");
+                });
+
+            modelBuilder.Entity("Tirkhanti_R12.Models.StudentReport", b =>
+                {
+                    b.Navigation("GetTirkhanti_R12Users");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,14 +1,17 @@
 ﻿@model Tirkhanti_R12.Models.StudentReport
 
-@{
-    ViewData["Title"] = "Edit";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+@{ ViewData["Title"] = "Edit";
+                Layout = "~/Views/Shared/_Layout.cshtml";
+                StudentRelationModel relationModel = new StudentRelationModel(); }
 
 <h1>Edit</h1>
 
 <h4>StudentReport</h4>
 <hr />
+@foreach (var item in relationModel.GetEmotions)
+{
+<label>@Html.DisplayFor(modelItem => item.StudentEmotion)</label>
+}
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">

@@ -42,13 +42,22 @@ namespace Tirkhanti_R12.Models
         [ForeignKey("FirstName")]
         public Tirkhanti_R12Users AssignedTo { get; set; } //Should be the fname or id or leader
 
-        [Column(Order = 6)]
+        [Column(Order = 9)]
         [Display(Name = "Priority")]
-        public int? Priority { get; set; }
+        [ForeignKey("EmotionID")]
+        public Emotions Priority { get; set; }
 
         [Column(Order = 7)]
         [Display(Name = "Completed")]
         public bool? IsComplete { get; set; } = false;
+
+        [Column(Order = 8)]
+        [Display(Name = "Selected Emotion")]
+        [ForeignKey("StudentEmotion")]
+        public Emotions SelectedEmotion { get; set; }
+
+
+        public virtual ICollection<Tirkhanti_R12Users> GetTirkhanti_R12Users { get; set; }
 
     }
 }

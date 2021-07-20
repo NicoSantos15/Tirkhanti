@@ -7,6 +7,10 @@
     "mssql2": {
       "type": "mssql.local",
       "connectionId": "TirkhantiContext"
+    },
+    "mssql3": {
+      "type": "mssql.local",
+      "connectionId": "Tirkhanti_"
     }
   }
 }
