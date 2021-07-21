@@ -39,7 +39,6 @@ namespace Tirkhanti_R12.Models
 
         [Display(Name = "Date Created")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Required]
-        public DateTime AccountCreated { get; set; }
+        public DateTime? AccountCreated { get; set; }
     }
 }

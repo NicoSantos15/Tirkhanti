@@ -168,8 +168,8 @@ C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\V
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\StudentReports\Details.cshtml.g.cs
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\StudentReports\Edit.cshtml.g.cs
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\StudentReports\Index.cshtml.g.cs
-C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Emotions\Create.cshtml.g.cs
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Emotions\Delete.cshtml.g.cs
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Emotions\Details.cshtml.g.cs
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Emotions\Edit.cshtml.g.cs
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Emotions\Index.cshtml.g.cs
+C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Emotions\EmotionSelectView.cshtml.g.cs

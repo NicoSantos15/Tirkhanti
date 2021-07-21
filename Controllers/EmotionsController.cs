@@ -43,18 +43,18 @@ namespace Tirkhanti_R12.Controllers
             return View(emotions);
         }
 
-        // GET: Emotions/Create
-        public IActionResult Create()
+        // GET: Emotions/EmotionSelectView
+        public IActionResult EmotionSelectView()
         {
             return View();
         }
 
-        // POST: Emotions/Create
+        // POST: Emotions/EmotionSelectView
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("EmotionID,StudentEmotion")] Emotions emotions)
+        public async Task<IActionResult> EmotionSelectView([Bind("EmotionID,StudentEmotion")] Emotions emotions)
         {
             if (ModelState.IsValid)
             {
