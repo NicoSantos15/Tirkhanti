@@ -74,7 +74,7 @@ namespace Tirkhanti_R12.Controllers
             return View(dy);
         }
 
-        public ActionResult NotificationList(bool isComplete = true)
+        public ActionResult NotificationList(bool isComplete = false)
         {
             var list = _db.StudentReports
                         .OrderBy(priority => priority.Priority)

@@ -52,9 +52,8 @@ namespace Tirkhanti_R12.Models
         public bool? IsComplete { get; set; } = false;
 
         [Column(Order = 8)]
-        [Display(Name = "Selected Emotion")]
-        [ForeignKey("StudentEmotion")]
-        public Emotions SelectedEmotion { get; set; }
+        [Display(Name = "selected emotion")]
+        public string SelectedEmotion { get; set; }
 
         public virtual ICollection <Tirkhanti_R12Users> GetTirkhanti_R12Users { get; set; }
 
