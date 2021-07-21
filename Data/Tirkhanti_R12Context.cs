@@ -18,10 +18,11 @@ namespace Tirkhanti_R12.Data
         }
 
         public DbSet<Emotions> Emotion { get; set; }
-        public DbSet<StudentReport> StudentReport { get; set; }
+        public DbSet<StudentReport> StudentReports { get; set; }
         public DbSet<Tirkhanti_R12Users> R12Users { get; set; }
         public DbSet<LeaderAssignedReport> LeaderAssignedReports { get; set; }
         public DbSet<LeaderChecked> LeadersChecked { get; set; }
+        public DbSet<StudentRelationModel> StudentRelationModels { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)

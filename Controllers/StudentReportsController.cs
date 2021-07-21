@@ -22,7 +22,7 @@ namespace Tirkhanti_R12.Controllers
         // GET: StudentReports
         public async Task<IActionResult> Index()
         {
-            return View(await _context.StudentReport.ToListAsync());
+            return View(await _context.StudentReports.ToListAsync());
         }
 
         // GET: StudentReports/Details/5
@@ -33,7 +33,7 @@ namespace Tirkhanti_R12.Controllers
                 return NotFound();
             }
 
-            var studentReport = await _context.StudentReport
+            var studentReport = await _context.StudentReports
                 .FirstOrDefaultAsync(m => m.ReportID == id);
             if (studentReport == null)
             {
@@ -73,7 +73,7 @@ namespace Tirkhanti_R12.Controllers
                 return NotFound();
             }
 
-            var studentReport = await _context.StudentReport.FindAsync(id);
+            var studentReport = await _context.StudentReports.FindAsync(id);
             if (studentReport == null)
             {
                 return NotFound();
@@ -124,7 +124,7 @@ namespace Tirkhanti_R12.Controllers
                 return NotFound();
             }
 
-            var studentReport = await _context.StudentReport
+            var studentReport = await _context.StudentReports
                 .FirstOrDefaultAsync(m => m.ReportID == id);
             if (studentReport == null)
             {
@@ -134,20 +134,42 @@ namespace Tirkhanti_R12.Controllers
             return View(studentReport);
         }
 
+        // GET: StudentReports/EmotionSelectView
+        public IActionResult EmotionSelectView()
+        {
+            return View();
+        }
+
+        // POST: StudentReports/EmotionSelectView
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EmotionSelectView([Bind("EmotionID,StudentEmotion")] Emotions emotions)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(emotions);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(emotions);
+        }
+
         // POST: StudentReports/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var studentReport = await _context.StudentReport.FindAsync(id);
-            _context.StudentReport.Remove(studentReport);
+            var studentReport = await _context.StudentReports.FindAsync(id);
+            _context.StudentReports.Remove(studentReport);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool StudentReportExists(int id)
         {
-            return _context.StudentReport.Any(e => e.ReportID == id);
+            return _context.StudentReports.Any(e => e.ReportID == id);
         }
     }
 }

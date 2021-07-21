@@ -12,7 +12,7 @@
 
 <div style="text-align:center;">
     <h4>View All Students</h4>
-    <h6>You are logged in as @User.Identity.Name</h6>
+    <h6>You are logged in as @UserManager.GetUserAsync(User).Result.FirstName</h6>
     <hr />
 </div>
 

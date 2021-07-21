@@ -85,7 +85,6 @@ C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\bin\Debug\net5.0\zh-Hans
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
-C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Tirkhanti_R12.csprojAssemblyReference.cache
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Tirkhanti_R12.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Tirkhanti_R12.AssemblyInfoInputs.cache
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Tirkhanti_R12.AssemblyInfo.cs
@@ -162,14 +161,13 @@ C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\P
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\bin\Debug\net5.0\Microsoft.AspNet.Identity.Core.dll
-C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Home\ViewAllStudent.cshtml.g.cs
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\StudentReports\Create.cshtml.g.cs
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\StudentReports\Delete.cshtml.g.cs
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\StudentReports\Details.cshtml.g.cs
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\StudentReports\Edit.cshtml.g.cs
 C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\StudentReports\Index.cshtml.g.cs
-C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Emotions\Delete.cshtml.g.cs
-C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Emotions\Details.cshtml.g.cs
-C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Emotions\Edit.cshtml.g.cs
-C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Emotions\Index.cshtml.g.cs
-C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Emotions\EmotionSelectView.cshtml.g.cs
+C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\StudentReports\EmotionSelectView.cshtml.g.cs
+C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Home\LeaderHome.cshtml.g.cs
+C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Tirkhanti_R12.csproj.AssemblyReference.cache
+C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Home\NotificationList.cshtml.g.cs
+C:\Users\nicod\source\repos\Tirkhanti_R12\Tirkhanti_R12\obj\Debug\net5.0\Razor\Views\Home\ViewAllStudent.cshtml.g.cs

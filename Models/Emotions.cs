@@ -30,6 +30,6 @@ namespace Tirkhanti_R12.Models
 
         [ForeignKey("Id")]
         [Display(Name = "Respond By")]
-        public Tirkhanti_R12Users? RespondBy { get; set; }
+        public Tirkhanti_R12Users RespondBy { get; set; }
     }
 }

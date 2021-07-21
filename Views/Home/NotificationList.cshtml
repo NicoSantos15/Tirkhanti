@@ -1,0 +1,41 @@
+﻿@model IQueryable<Tirkhanti_R12.Models.StudentReport>
+
+@{ }
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <p>Is Complete</p>
+            </th>
+            <th>
+                <p>Feeling Today</p>
+            </th>
+            <th>
+                <p>Comment</p>
+            </th>
+            <th>
+                <p>Priority</p>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.IsComplete)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SelectedEmotion)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.StudentComment)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Priority)
+    </td>
+</tr>
+}
+    </tbody>
+</table>

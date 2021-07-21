@@ -56,8 +56,7 @@ namespace Tirkhanti_R12.Models
         [ForeignKey("StudentEmotion")]
         public Emotions SelectedEmotion { get; set; }
 
-
-        public virtual ICollection<Tirkhanti_R12Users> GetTirkhanti_R12Users { get; set; }
+        public virtual ICollection <Tirkhanti_R12Users> GetTirkhanti_R12Users { get; set; }
 
     }
 }

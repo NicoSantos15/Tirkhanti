@@ -24,7 +24,7 @@ namespace Tirkhanti_R12.Models
 
         [Display(Name = "Checked Date")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public DateTime CheckedDate { get; set; }
+        public DateTime? CheckedDate { get; set; }
 
     }
 }

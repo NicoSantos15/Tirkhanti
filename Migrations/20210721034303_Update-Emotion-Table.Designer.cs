@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tirkhanti_R12.Data;
 
 namespace Tirkhanti_R12.Migrations
 {
     [DbContext(typeof(Tirkhanti_R12Context))]
-    partial class Tirkhanti_R12ContextModelSnapshot : ModelSnapshot
+    [Migration("20210721034303_Update-Emotion-Table")]
+    partial class UpdateEmotionTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -186,14 +188,9 @@ namespace Tirkhanti_R12.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("StudentReportReportID")
-                        .HasColumnType("int");
-
                     b.HasKey("EmotionID");
 
                     b.HasIndex("Id");
-
-                    b.HasIndex("StudentReportReportID");
 
                     b.ToTable("Emotion");
                 });
@@ -271,19 +268,17 @@ namespace Tirkhanti_R12.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("StudentComment")
+                    b.Property<string>("SelectedEmotion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("StudentEmotion")
-                        .HasColumnType("int");
+                    b.Property<string>("StudentComment")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ReportID");
 
                     b.HasIndex("EmotionID");
 
                     b.HasIndex("FirstName");
-
-                    b.HasIndex("StudentEmotion");
 
                     b.ToTable("StudentReport");
                 });
@@ -432,10 +427,6 @@ namespace Tirkhanti_R12.Migrations
                         .WithMany()
                         .HasForeignKey("Id");
 
-                    b.HasOne("Tirkhanti_R12.Models.StudentReport", null)
-                        .WithMany("GetEmotions")
-                        .HasForeignKey("StudentReportReportID");
-
                     b.Navigation("RespondBy");
                 });
 
@@ -479,15 +470,9 @@ namespace Tirkhanti_R12.Migrations
                         .WithMany()
                         .HasForeignKey("FirstName");
 
-                    b.HasOne("Tirkhanti_R12.Models.Emotions", "SelectedEmotion")
-                        .WithMany()
-                        .HasForeignKey("StudentEmotion");
-
                     b.Navigation("AssignedTo");
 
                     b.Navigation("Priority");
-
-                    b.Navigation("SelectedEmotion");
                 });
 
             modelBuilder.Entity("Tirkhanti_R12.Models.Tirkhanti_R12Users", b =>
@@ -499,8 +484,6 @@ namespace Tirkhanti_R12.Migrations
 
             modelBuilder.Entity("Tirkhanti_R12.Models.StudentReport", b =>
                 {
-                    b.Navigation("GetEmotions");
-
                     b.Navigation("GetTirkhanti_R12Users");
                 });
 #pragma warning restore 612, 618
