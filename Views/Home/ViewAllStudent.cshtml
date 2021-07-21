@@ -1,12 +1,8 @@
 ﻿@model IQueryable<Tirkhanti_R12Users>
 @using Microsoft.AspNetCore.Identity
-
-
 @inject UserManager<Tirkhanti_R12Users> UserManager
 
-@{ 
-    ViewData["Title"] = "ViewAllStudent";
-}
+@{ ViewData["Title"] = "ViewAllStudent"; }
 
 <!--Show table list of students, gives additional function for all senior leader/admin-->
 
@@ -16,58 +12,37 @@
     <hr />
 </div>
 
-<form asp-action="ViewAllStudent" asp-controller="Home" method="post">
-    <input type="checkbox" name="isActive" value="false" />
-    <button type="submit">Submit</button>
-</form>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                <p>First Name</p>
-            </th>
-            <th>
-                <p>Last Name</p>
-            </th>
-            <th>
-                <p>User Name</p>
-            </th>
-
-
-            @*@if (@UserManager.GetUserAsync(User).Result.AccountType == "Senior Leader")
-                {
-                    <th>Manage</th>
-                }*@
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-<tr class="@(item.IsActive == false ? "table-danger" : "")">
-    <td>
-        @Html.DisplayFor(modelItem => item.FirstName)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.LastName)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.UserName)
-    </td>
-
-    @*@if (@UserManager.GetUserAsync(User).Result.AccountType == "Senior Leader")
-        {
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> | <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        }*@
-
-</tr>}
-    </tbody>
-</table>
+<div>
+    <form asp-action="ViewAllStudent" asp-controller="Home" method="post">
+        <input type="checkbox" name="isActive" value="false" />
+        <button type="submit">Submit</button>
+    </form>
+</div>
 
 <div>
-    <a asp-action="Create">Back to main</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th><p>First Name</p></th>
+                <th><p>Last Name</p></th>
+                <th><p>User Name</p></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+             <tr class="@(item.IsActive == false ? "table-danger" : "")">
+                <td><p>@Html.DisplayFor(modelItem => item.FirstName)</p></td>
+                <td><p>@Html.DisplayFor(modelItem => item.LastName)</p></td>
+                <td><p>@Html.DisplayFor(modelItem => item.UserName)</p></td>
+             </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <a asp-action="Index">Back to main</a>
 </div>
 
 

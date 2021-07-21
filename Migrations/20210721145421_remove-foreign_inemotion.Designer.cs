@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tirkhanti_R12.Data;
 
 namespace Tirkhanti_R12.Migrations
 {
     [DbContext(typeof(Tirkhanti_R12Context))]
-    partial class Tirkhanti_R12ContextModelSnapshot : ModelSnapshot
+    [Migration("20210721145421_remove-foreign_inemotion")]
+    partial class removeforeign_inemotion
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -28,8 +28,8 @@ namespace Tirkhanti_R12.Models
         [Required]
         public string StudentEmotion { get; set; }
 
-        [ForeignKey("Id")]
-        [Display(Name = "Respond By")]
-        public Tirkhanti_R12Users RespondBy { get; set; }
+        //[ForeignKey("Id")]
+        //[Display(Name = "Respond By")]
+        //public Tirkhanti_R12Users RespondBy { get; set; }
     }
 }
