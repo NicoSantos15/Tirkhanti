@@ -1,10 +1,12 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@{ ViewData["Title"] = "Home Page"; }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-
+    <p>Please select your account</p>
+    <form method="get" action="/Account/LoginStudent">
+        <button type="submit">Student</button>
+    </form>
+    <form method="get" action="/Account/LoginLeader">
+        <button type="submit">Leader</button>
+    </form>
 </div>
-

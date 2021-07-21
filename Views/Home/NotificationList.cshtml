@@ -1,36 +1,59 @@
-﻿@model IQueryable<Tirkhanti_R12.Models.StudentReport>
-
+﻿@model IEnumerable<Tirkhanti_R12.Models.StudentReport>
 @{ }
+<div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                <p>Is Complete</p>
-            </th>
-            <th>
-                <p>Feeling Today</p>
-            </th>
-            <th>
-                <p>Comment</p>
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReportDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudentComment)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AssignedDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CompleteDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Priority)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsComplete)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
 <tr>
     <td>
-        @Html.DisplayFor(modelItem => item.IsComplete)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.SelectedEmotion)
+        @Html.DisplayFor(modelItem => item.ReportDate)
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.StudentComment)
     </td>
-</tr>
-}
-    </tbody>
-</table>
+    <td>
+        @Html.DisplayFor(modelItem => item.AssignedDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CompleteDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Priority)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.IsComplete)
+    </td>
+    <td>
+        <a asp-action="Edit" asp-route-id="@item.ReportID">Edit</a>
+    </td>
+</tr>}
+        </tbody>
+    </table>
+
+
+</div>

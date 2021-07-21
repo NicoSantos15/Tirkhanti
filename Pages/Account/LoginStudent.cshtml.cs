@@ -87,7 +87,7 @@ namespace Tirkhanti_R12.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return Redirect("~/Home/ViewAllStudent");
+                    return Redirect("~/StudentReports/EmotionSelectView");
                 }
                 if (result.RequiresTwoFactor)
                 {

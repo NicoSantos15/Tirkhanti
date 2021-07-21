@@ -1,0 +1,45 @@
+﻿@page
+@model LeaderLoginModel
+
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<Tirkhanti_R12Users> UserManager
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<!--Sign in Page-->
+<div class="col-md-10 offset-md-1">
+    <section>
+        <div class="login-form-icon">
+            <img src="https://www.internationalstudents.sa.edu.au/wp-content/uploads/vfb/logo-Paralowie.gif" alt="Paralowie R-12" style="width:300px;height:320px;">
+        </div>
+        <form id="account" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Input.UserName"></label>
+                <input asp-for="Input.UserName" class="form-control" />
+                <span asp-validation-for="Input.UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Password"></label>
+                <input asp-for="Input.Password" class="form-control" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label asp-for="Input.RememberMe">
+                        <input asp-for="Input.RememberMe" />
+                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Log in</button>
+            </div>
+        </form>
+    </section>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Tirkhanti_R12.Models.StudentReport>
+﻿@*@model IEnumerable<Tirkhanti_R12.Models.StudentReport>
 
 @{
     ViewData["Title"] = "Index";
@@ -35,8 +35,9 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
+        @foreach (var item in Model) 
+        {
+         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.ReportDate)
             </td>
@@ -56,11 +57,10 @@
                 @Html.DisplayFor(modelItem => item.IsComplete)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ReportID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ReportID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ReportID">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.ReportID">Edit</a>
             </td>
-        </tr>
-}
+         </tr>
+        }
     </tbody>
-</table>
+</table>*@
+

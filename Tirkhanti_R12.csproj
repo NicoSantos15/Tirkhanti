@@ -22,9 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Home\StudentViews\" />
     <Folder Include="_Database\" />
-    <Folder Include="Views\Home\LeaderViews\" />
   </ItemGroup>
 
 </Project>

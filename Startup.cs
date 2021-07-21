@@ -29,7 +29,7 @@ namespace Tirkhanti_R12
             services.AddRazorPages();
             services.AddMvc().AddRazorPagesOptions(options =>
             {
-                options.Conventions.AddPageRoute("/Account/Login", "");
+                options.Conventions.AddPageRoute("/Home/Index", "");
             });
 
             services.AddDbContext<Tirkhanti_R12Context>(options =>

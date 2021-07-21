@@ -31,7 +31,7 @@ namespace Tirkhanti_R12.Controllers
 
         public IActionResult Index()
         {
-  
+
             return View();
         }
 
@@ -51,7 +51,7 @@ namespace Tirkhanti_R12.Controllers
             {
                 list = list.Where(user => user.IsActive == isActive);
             }
-             return View(list);
+            return View(list);
         }
 
         public ActionResult ViewMonthly()
@@ -74,7 +74,7 @@ namespace Tirkhanti_R12.Controllers
             return View(dy);
         }
 
-        public ActionResult NotificationList(bool isComplete = false)
+        public ActionResult NotificationList(bool isComplete = true)
         {
             var list = _db.StudentReports
                         .OrderBy(priority => priority.Priority)
